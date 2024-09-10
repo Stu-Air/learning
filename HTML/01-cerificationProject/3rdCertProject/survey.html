@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>technical documentation</title>
+</head>
+<body>
+  <main id="main-doc">
+    <h1>Arch Linux Installation Guide</h1>
+    <section class="main-section" id="Pre-installation">
+      <header><h2>Pre-installation</h2></header>
+      <p>This document is a guide for installing Arch Linux using the live system booted from an installation medium made from an official installation image.
+        Visit the Download page and, depending on how you want to boot, acquire the ISO file or a netboot image, and the respective GnuPG signature. 
+        On a system with GnuPG installed, do this by downloading the ISO PGP signature (under Checksums in the page Download) to the ISO directory, and verifying it with:</p>
+      <code>gpg --keyserver-options auto-key-retrieve --verify archlinux-version-x86_64.iso.sig</code>
+      <p>When the installation medium's boot loader menu appears,</p>
+      <li>If you used the ISO, select Arch Linux install medium and press Enter to enter the installation environment.</li>
+      <li>if you used the Netboot image, choose a geographically close mirror from Mirror menu, then select Boot Arch Linux and press Enter.</li>
+      <p>You will be logged in on the first virtual console as the root user, and presented with a Zsh shell prompt. Personally for connecting to wifi if your device doesn't have an ethernet port
+        code below to power your device and connect to your router.</p>  
+      <code>iwctl device phy0 set-property Powered on<br/>
+        iwctl device wlan0 set-property Powered on<br/> 
+        iwctl station [WIFI DEVICE] connect [SSID]</code>      
+    </section>
+    <section class="main-section" id="Script_Installation">
+      <header><h2>Script Installation</h2></header>
+      <p>Once above has been completed you can start the installation process, we need to download the git repo if you have not already downloaded it.
+        this can be done by using git.</p>
+      <code>https://github.com/Stu-Air/Arch-Installer-NG.git </code>
+      <p>Before runnning the script we need to fill in a few things at the top of the installer.sh file, following includes:</p>      
+      <li> Drive you want to install Arch linux on</li>
+      <li> Hostname of the installed machine</li>
+      <li> Root password (leave blank to be prompted)</li>
+      <li> Main user to create (by default, added to wheel group, and others)</li>
+      <li> The main user's password (leave blank to be prompted)</li>
+      <li> System timezone</li>
+      <li> Keyboard layout used in system </li>
+      <li> Wireless device, leave blank to not use wireless and use DHCP instead</li>
+      <li> amd or intel chipset ucode</li>
+      <p>Once you have done we can proceed with the following command from inside the repo folder you just downloaded.</p>
+      <code>sh ./installer.sh</code>     
+    </section>
+    <section class="main-section" id="Extras_-_Desktop">
+      <header><h2>Extras - Desktop</h2></header>
+      <p>you may have noticed that there was an "extra" section. this gives you the choice of 3 options:</p> 
+      <li>kde desktop with sddm login manager</li>
+      <li>xfce desktop with lightdm login manager</li>
+      <li>gnome desktop with gdm login manager</li>
+      <p>these can be install on any Arch linux based system, by the following command</p>
+      <code>pacman -Sy --noconfirm - < /[name_of_file].txt</code>        
+    </section>
+    <section class="main-section" id="Extras_-_Applications">
+      <header><h2>Extras - Applications</h2></header>
+      <p>this sections is where standard repo applications are installed and als ofrom the AUR whis needs an aur helper this section installs the paru helper.
+        by default the script will install my personal applications from github repo (<a href="https://github.com/Stu-Air/arch-apps">https://github.com/Stu-Air/arch-apps</a>).<br> 
+        To install paru on any Arch linux based distro with the following command</p>
+      <code>cd ~ <br/>
+        git clone https://aur.archlinux.org/paru-bin.git<br/> 
+        chown $USER_NAME:$USER_NAME ~<br/>
+        chmod -R 777 paru-bin<br/>
+        cd paru-bin<br/>
+        echo -en "$USER_PASSWORD" |sudo -u $USER_NAME makepkg -si --noconfirm</code>
+      <p>when installing applications from the aur with paru the commands change very slighty. we will be using the following command:</p>
+      <code>paru S- [packageName]</code>
+      <p>when instll from the Arch Linux repo's the command uses pacman.</p>
+      <code>pacman S- [packageName]</code>
+      <p>here is some of my default packages that will be installed if you decided you fill in this section at the top</p>
+      <li>discord</li>
+      <li>mpv</li>
+      <li>thunderbird</li>
+      <li>libreoffice-fresh</li>
+      <li>firefox</li>
+      <li>steam</li> 
+      <p>to run this command on any Arch Linux based distro :</p>
+      <code>sh ./applications.sh</code>
+    </section>
+    <section class="main-section" id="Extras_-_Settings">
+      <header><h2>Extras - Settings</h2></header>
+      <p>last section / option is the settings and customisation commands the few setting that are included are:  </p>
+      <li>Wallpapers
+      <li>fonts</li>
+      <li>zshrc file</li>  
+      <p>by default the script will install my personal applications from github repo (<a href="https://github.com/Stu-Air/dotfiles">https://github.com/Stu-Air/dotfiles</a>).<br>
+      This repo if cloned by itself can be installed on any distro as long as you pick the right desktop.<br>
+      to run this command :</p>
+      <code>sh ./settings.sh</code>
+    </section>
+    <nav id="navbar">
+      <header>Contents</header>
+      <a class="nav-link" href="#Pre-installation">Pre-installation</a>
+      <a class="nav-link" href="#Script_Installation">Script Installation</a>
+      <a class="nav-link" href="#Extras_-_Desktop">Extras - Desktop</a>
+      <a class="nav-link" href="#Extras_-_Applications">Extras - Applications</a>
+      <a class="nav-link" href="#Extras_-_Settings">Extras - Settings</a>
+    </nav>
+  </main>
+</body>
+<footer>
+  <label>Created by StuAir (S.Kirker) for <a target="_blank" href="https://www.freecodecamp.org">FreeCodeCamp</href></a></label>
+ </footer>
+</html>

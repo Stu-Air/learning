@@ -1,0 +1,251 @@
+:root{
+    --transparent:transparent;
+    --fade: linear-gradient(#d08770 5%,#2e3440 75%);
+}
+
+.tatooine{
+    width: 50%;
+    height:100vh;
+    margin: 0 auto;   
+    /*background: linear-gradient(#d08770 5%,#2e3440 75%);*/
+    overflow: hidden;
+    border: 2px solid;
+    background-color: var(--transparent);
+}
+
+/*.sun{
+    width:400px;
+    height: 300px;
+    margin: 5% 45%;
+}*/
+
+.sun1{
+    width: 200px;
+    height: 200px;
+    margin: 5% 50%;
+    position:fixed;
+    background: linear-gradient(#d08770 5%, #ebcb8b 75%);
+    border-radius: 50%;
+    filter: blur(3px);
+    box-shadow:#b48ead 0px 10px 10px 10px;
+}
+
+.sun2{
+    width: 200px;
+    height: 200px;
+    margin: 10% 40%;
+    position:fixed;
+    background: linear-gradient(#b48ead 5%, #d08770 75%);
+    border-radius: 50%;
+    filter: blur(2px);
+    transform: rotate(45deg);
+    box-shadow:#b48ead 0px 10px 10px 10px;
+}
+
+.house{
+    width: 200px;
+    height: 200px;
+    margin-top:50%;
+    border-radius:50% 50% 0 0;
+    background: var(--fade);
+    position: absolute;
+}
+
+.door{
+    width: 50px;
+    height: 100px;
+    margin: 45% 90%;
+    border-radius:50% 50% 0 0;
+    background: var(--fade);
+}
+
+
+
+
+*{
+    margin: 0%;
+    background-color: #2e3440;
+    box-sizing: border-box;
+}
+
+
+.color{
+    height:100vh;
+    width: 100%;    
+    background: var(--fade);
+}
+
+
+
+header{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: row;
+    padding:10px;
+    position: fixed;
+    background-color:#d08770;
+    z-index: 2;
+}
+#navbar{
+    width: 75%;
+    margin: 0 auto;
+    background-color:var(--transparent);
+}
+#navbar a{
+    padding: 2% 2%;
+    color: black;
+    text-decoration: none;
+    background-color:var(--transparent);
+}
+
+
+/*#welcome-section{
+    height:100vh;
+    width: 100vw; 
+
+}*/
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+/*.center{
+    width: 75%;
+    height: 100%;
+    margin: 0 auto;   
+}*/
+
+
+
+
+
+
+
+h1{
+    height: 50px;
+    width: 200px;
+    font-family: Poller One;;
+    padding:10px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    text-align: center;
+    background-color: var(--transparent);
+
+}
+
+
+#projects{
+    position:relative;
+    z-index: 1;
+    width: 75%;
+    height: fit-content;
+    margin: 0 auto;
+    padding:5%;
+}
+
+.project-tile{
+    width: 75%;
+    height: max-content;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 5px;
+    row-gap: 5px;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+
+
+
+border: 2px purple;
+}
+.project-tile img{
+    border-radius: 10%;
+    border: 2px solid white;
+    height: 300px;
+    width:300px;
+    background-position: center;
+}
+
+
+
+.social-icons{
+    width: auto;
+    height: 50px;
+    text-align: center;
+    color: white;
+    padding-bottom: 10%;
+}
+
+
+i{
+    font-size:xx-large;
+    color: white;
+    text-align: center;
+    padding:1% 0% 0% 0%;
+
+}
+
+footer{
+    color: white;
+    padding:5px 30px;
+}
+footer a{
+    color: white;
+}
+
+
+
+ 
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    /*insert your boss css here*/
+    .tatooine{
+        width: 100vw;
+        height:100vh;
+        margin: 0 auto;   
+        /*background: linear-gradient(#d08770 5%,#2e3440 75%);*/
+        background-color: var(--transparent);
+    }
+
+
+}
+    
+@media screen and (min-width: 481px) and (max-width: 767px) {
+    /*insert your boss css here*/
+    .tatooine{
+        width: 100vw;
+        height:100vh;
+        margin: 0 auto;   
+        /*background: linear-gradient(#d08770 5%,#2e3440 75%);*/
+
+    
+
+        background-color: var(--transparent);
+    }
+}
+    
+@media screen and (min-width: 320px) and (max-width: 480px ) {
+    /*insert your boss css here and start dominating mobile galaxies*/
+    .tatooine{
+        width: 100vw;
+        height:100vh;
+        margin: 0 auto;   
+        /*background: linear-gradient(#d08770 5%,#2e3440 75%);*/
+
+    
+
+        background-color: var(--transparent);
+    }
+} 

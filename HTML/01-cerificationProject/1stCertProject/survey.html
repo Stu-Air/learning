@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <title>survey-form</title>
+  <div class="header-image">
+ </head>
+    <body>  
+      <h1 id="title">Minecraft Survey Form</h1>
+   </div>
+   <div class="body-image"> 
+    <p id="description">Everyone's favorite block game. please fill in this survey.</p>
+   </body>
+   <form id="survey-form"> 
+    <fieldset class="format1">
+     <label for="name" id="name-label">Full Name : <input placeholder="Name Required" id="name" type="text" required name="name" required/></label>
+     <label for="email" id="email-label">Email : <input placeholder="Email Required" id="email" type="email" name="email" required/></label>
+     <label for="number" id="number-label">Age : <input placeholder="Age" id="number" type="number" name="number" min="16" max="120"></label>
+    </fieldset>
+     <fieldset class="format2">
+      <label>What is your favorite minecraft item: <select type="select" id="dropdown">
+       <option value=" ">Auto Crafting Table</option>
+       <option value="1">Diamond Pickaxe</option>
+       <option value="2">Netherite Amour</option>
+       <option value="3">Pretty Flowers</option>
+       <option value="4">Other</option>
+      </label></select>
+    </fieldset>
+      <fieldset class="format2"><label class="textlabel">Other favorite item and why you like it? <textarea rows="3" cols="40" placeholder="Other favorite items" class="text1"></textarea></label></fieldset>  
+    <fieldset class="format3"><label>Do you wear a cape?</label>
+     <label for="yes"><input id="yes" type="radio" name="cape" value="Yes" checked /> Yes</label>
+     <label for="no"><input id="no" type="radio" name="cape" value="No"/> No </label>
+     <label for="sometimes"><input id="sometimes" type="cape" name="Sometimes" value="Sometimes"/> Sometimes </label> 
+    </fieldset>
+        <fieldset class="format3"><label>Do you play on an online server?</label>
+     <label for="yes"><input id="yes" type="radio" name="server" value="Yes" checked /> Yes  </label>
+     <label for="no"><input id="no" type="radio" name="server" value="No"/> No </label>
+     <label for="sometimes"><input id="sometimes" type="server" name="sometimes" value="Sometimes"/> Sometimes </label> 
+    </fieldset>   
+    <fieldset class="format4"><label class="textlabel">Which version to you play : </label>
+     <label><input type="checkbox" name="checkbox" value="Java Edition" checked /> Java Edition </label> 
+     <label><input type="checkbox" name="checkbox" value="Pocket Edition"/> Pocket Edition </label> 
+     <label><input type="checkbox" name="checkbox" value="Bedrock Edition"/> Bedrock Edition </label>
+     <label><input type="checkbox" name="checkbox" value="Console Edition"/> Console Edition </label> 
+     <label><input type="checkbox" name="checkbox" value="Education Edition"/> Education Edition </label> 
+    </fieldset>
+    <fieldset class="format5"><label>Give us a brief description of your first place called home? </label>
+     <textarea class="text2" rows="10" cols="120" placeholder="Description of first building"></textarea>
+    </fieldset> 
+    <fieldset class="format6">
+     <submit><input class="submit" id="submit" type="submit"/></submit>
+    </fieldset>
+   </form>
+   <fieldset>
+   <footer>
+    <label>Created by StuAir (S.Kirker) for <a href="https://www.freecodecamp.org">FreeCodeCamp</href></a></label>
+   </footer>
+  </fieldset>
+  </div>
+</html>
