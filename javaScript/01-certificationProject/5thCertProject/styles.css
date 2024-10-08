@@ -1,0 +1,119 @@
+
+body{
+  margin:0% 0%;
+  padding: 0%;
+  background-color: rgb(42, 42, 59);
+  height: 100vh;
+}
+
+.center{
+  width:75%;
+  height: 75vh;
+  margin:0% auto;
+  text-align: center;
+
+}
+
+.title{
+  color: grey;
+}
+
+#search-input{
+  color:white;
+  font-size: larger; 
+  background-color: rgb(70, 70, 100);
+  border-radius: 15% 15 15% 15%;
+  border: 1px solid rgb(70, 70, 100);
+  height: 30px; 
+  width: 500px;
+  padding:2px 5px;
+  text-align: center;
+
+}
+
+button{
+  background-color: rgb(163, 163, 163);
+  height:30px;
+  width: 150px;
+  color: rgb(70, 70, 100);
+  font-size: large;
+  align-items: center;
+  text-align: center;
+  font-weight: 700;
+  margin: 2% auto;
+}
+
+#sprite{
+  width: 180px;
+  height: 180px;
+  margin: auto;
+  align-items: center;
+  text-align: center;
+}
+
+#container {
+  color:white;
+}
+
+
+.stats, .results{
+  width: 200px;
+  color: white;
+}
+
+.stat, .result{
+  width: 200px;
+  height:20px;
+  text-align: center;
+  margin: 2%;
+  padding:2% 0%;
+  background-color: #B19cd9;
+}
+#type1, #type2{
+  width: 99px;
+  height:20px;
+  text-align: center;
+  display: inline;
+}
+
+
+.results{
+  margin-left: 1%; 
+}
+
+.stats{
+  margin-right: 1%;
+}
+
+
+.stat-window{
+  display: flex;
+  flex-direction: row;
+  margin: auto auto;
+  width: 400px;
+}
+
+
+/* Footer*/
+.social-icons{
+  width: auto;
+  height: 50px;
+  text-align: center;
+  color: white;
+}
+footer a{
+  display:inline;
+  color: white;
+}
+i{
+  font-size:xx-large;
+  color: white;
+  text-align: center;
+  display:inline;
+  margin: 0 2% 3% 0;
+}
+footer label{
+  color: white;
+  text-align: center;
+  display: block;
+}
