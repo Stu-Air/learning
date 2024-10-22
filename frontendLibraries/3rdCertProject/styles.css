@@ -1,0 +1,78 @@
+#title{
+text-align: center;
+}
+
+body{
+  text-align: center;
+  align-content: center;
+  align-items: center;
+}
+
+#drum-machine{
+  width: 700px;
+  height: 500px;
+  border: 2px solid; 
+  border-radius: 20px; 
+  display: inline-flex;
+  flex-direction: row-reverse;
+  align-items: center;
+
+
+/* styles*/
+background-color: rgb(51, 51, 51);
+}
+
+#display{
+  width: 200px;
+  height: 70px;
+  border: 1px solid black;
+  background-color: #b6cab6;
+  margin-right: auto;
+  font-size: x-large;
+
+}
+
+#pads{
+  display:grid;
+  grid-template-rows: 80px 80px 80px;
+  grid-template-columns: 80px 80px 80px;
+  margin-left: 50px;
+  width: 48%;
+}
+
+.drum-pad{
+  height: 70px;
+  width: 70px;
+  font-size: x-large;
+  border: 1px solid black; 
+  text-align: center ;
+
+
+/* styles*/
+background-color: darkgrey;
+}
+
+
+/* Footer*/
+.social-icons{
+  width: auto;
+  height: 50px;
+  text-align: center;
+  color: navy;
+}
+footer a{
+  display:inline;
+  color: navy;
+}
+i{
+  font-size:xx-large;
+  color: navy;
+  text-align: center;
+  display:inline;
+  margin: 0 2% 3% 0;
+}
+footer label{
+  color: navy;
+  text-align: center;
+  display: block;
+}
