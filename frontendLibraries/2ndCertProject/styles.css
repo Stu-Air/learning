@@ -1,0 +1,49 @@
+#title{
+text-align: center;
+}
+
+
+#container{
+  width: 100vw;
+  height: 75vh;
+  margin: 0;
+  display: inline-flex;
+}
+
+#editor{
+  height: 99.5%;
+}
+
+#preview, #editor{
+  height: 100%;
+  width:48%;
+  margin: 1px;
+  padding: 4px;
+  border: 1px solid black; 
+}
+
+
+
+/* Footer*/
+.social-icons{
+  width: auto;
+  height: 50px;
+  text-align: center;
+  color: navy;
+}
+footer a{
+  display:inline;
+  color: navy;
+}
+i{
+  font-size:xx-large;
+  color: navy;
+  text-align: center;
+  display:inline;
+  margin: 0 2% 3% 0;
+}
+footer label{
+  color: navy;
+  text-align: center;
+  display: block;
+}
