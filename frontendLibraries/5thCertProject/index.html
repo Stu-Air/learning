@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.6.0/css/all.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Build a 25 + 5 Clock</title>
+</head>
+
+
+<body>
+  <h1 id="title">25 + 5 Clock</h1>
+  <div class="center">
+    <fieldset class="break"><legend id="break-label">Break</legend>  
+      <div id="break-length">5</div>
+      <button id="break-increment"><i class="fa-solid fa-arrow-up"></i></button>  
+      <button id="break-decrement"><i class="fa-solid fa-arrow-down"></i></button>
+    </fieldset>
+    <fieldset class="session"><legend id="session-label">Session</legend>
+      <div id="session-length">25</div>
+      <button id="session-increment"><i class="fa-solid fa-arrow-up"></i></button>
+      <button id="session-decrement"><i class="fa-solid fa-arrow-down"></i></button>
+    </fieldset>
+  </div>
+  <audio id="beep" preload="auto" src="https://cdn.freecodecamp.org/testable-projects-fcc/audio/BeepSound.wav"></audio>
+  
+  
+  <div id=display>
+  <div id="timer-label"></div>
+  <div id="time-left">25</div>
+    <button id="start_stop"><i class="fa-solid fa-play"></i></button>
+    <button id="reset"><i class="fa-solid fa-arrows-rotate"></i></button>
+  </div>
+
+
+  <footer>
+    <div id="socials" class="social-icons">
+      <h4>Check out my other projects on</h4>
+      <a id="profile-link" href="https://github.com/Stu-Air" target="_blank"><i class="fa-brands fa-github"></i></a>
+      <a id="profile-link" href="https://www.linkedin.com/in/stuartkirker" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+      <label>Created by StuAir (S.Kirker) for <a href="https://www.freecodecamp.org">FreeCodeCamp</href></a></label>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
